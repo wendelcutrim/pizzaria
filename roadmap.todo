@@ -121,21 +121,21 @@ Fase 7 - Acrescentando estilo e imagens a página estática:
         Você deve ver uma página exibindo as pizzas :p
 
 Fase 8 - Mostrando as pizzas dinamicamente a partir de um arquivo JSON:
-    ☐ Crie uma pasta chamada database
-    ☐ Na pasta database crie um arquivo chamado Pizzas.json
+    ✔ Crie uma pasta chamada database @done(22-04-05 13:19)
+    ✔ Na pasta database crie um arquivo chamado Pizzas.json @done(22-04-05 13:18)
         Este arquivo irá conter um array com objetos.
         Cada um desses objeto terá informações sobre uma pizza
-    ☐ Copie para o arquivo Pizzas.json o conteúdo do link abaixo
+    ✔ Copie para o arquivo Pizzas.json o conteúdo do link abaixo @done(22-04-05 13:18)
     https://github.com/sergiomoura/pizzaria-fantastica/blob/master/database/Pizzas.json
-    ☐ No arquivo PizzasController.js
-        ☐ Importe o conteúdo do arquivo Pizzas.json para uma variável chamada pizzas.
-        ☐ Altere a função listar para que ela renderize a view pizzas passando para ela também a variável pizzas.
-    ☐ No arquivo pizzas.ejs
-        ☐ Logo no começo da tag main, crie um elemento <% %> com um 'for'
-        ☐ Este 'for' deve percorrer o array de pizzas. Dica: for(p of pizzas){}
-        ☐ Ponha dentro do for um dos elementos' article presentes no arquivo
-        ☐ Lembre de ter um elemento <% %> para fechar o for, isto é: <% } %>
-        ☐ Injete nesse elemento article que está dentro do for as informações dinâmicas:
+    ✔ No arquivo PizzasController.js @done(22-04-05 13:19)
+        ✔ Importe o conteúdo do arquivo Pizzas.json para uma variável chamada pizzas. @done(22-04-05 13:19)
+        ✔ Altere a função listar para que ela renderize a view pizzas passando para ela também a variável pizzas. @done(22-04-05 13:19)
+    ✔ No arquivo pizzas.ejs @done(22-04-05 13:20)
+        ✔ Logo no começo da tag main, crie um elemento <% %> com um 'for' @done(22-04-05 13:21)
+        ✔ Este 'for' deve percorrer o array de pizzas. Dica: for(p of pizzas){} @done(22-04-05 13:21)
+        ✔ Ponha dentro do for um dos elementos' article presentes no arquivo @done(22-04-05 13:21)
+        ✔ Lembre de ter um elemento <% %> para fechar o for, isto é: <% } %> @done(22-04-05 13:21)
+        ✔ Injete nesse elemento article que está dentro do for as informações dinâmicas: @done(22-04-05 13:21)
         Exemplo:
             Onde se vê:
             <img src="/img/quatroqueijos.jpg" alt="Quatro Queijos">
@@ -143,7 +143,7 @@ Fase 8 - Mostrando as pizzas dinamicamente a partir de um arquivo JSON:
             <img src="<%=p.img%>" alt="<%=p.nome%>">
         Obs:
             Ainda não alteraremos o link <a href="pizza.html">Ver Mais</a>
-        ☐ Apague todos os elementos article que estiverem fora do for.
+        ✔ Apague todos os elementos article que estiverem fora do for. @done(22-04-05 13:24)
     
     Verificações:
         Com o sevidor rodando, visite o endereço https://localhost:3000
@@ -152,19 +152,19 @@ Fase 8 - Mostrando as pizzas dinamicamente a partir de um arquivo JSON:
 
 
 Fase 9 - Criando uma página para mostrar detalhes de uma pizza:
-    ☐ No arquivo PizzasRouter.js crie uma rota get para '/pizzas/:id'
+    ✔ No arquivo PizzasRouter.js crie uma rota get para '/pizzas/:id' @done(22-04-05 13:29)
         Essa rota deve direcionar a requisição para o controller PizzasController.mostrar
-    ☐ No objeto literal do arquivo PizzasController.js, crie uma função chamada mostrar.
+    ✔ No objeto literal do arquivo PizzasController.js, crie uma função chamada mostrar. @done(22-04-05 13:31)
         Essa função deve:
-            ☐ Capturar o id da pizza desejada pelo usuário (req.params.id) numa variável id
-            ☐ Buscar no array de pizzas a pizza tem o id buscado e guardar numa variável pizza
+            ✔ Capturar o id da pizza desejada pelo usuário (req.params.id) numa variável id @done(22-04-05 13:31)
+            ✔ Buscar no array de pizzas a pizza tem o id buscado e guardar numa variável pizza @done(22-04-05 13:31)
                 Dica: pizzas.find(p=>p.id==id)
-            ☐ Renderizar a view pizza.ejs, passando para ela também a variável pizza
+            ✔ Renderizar a view pizza.ejs, passando para ela também a variável pizza @done(22-04-05 13:31)
 
-    ☐ Na pasta views, crie o arquivo pizza.ejs
-    ☐ Copie para o arquivo pizza.ejs o conteúdo do link abaixo
+    ✔ Na pasta views, crie o arquivo pizza.ejs @done(22-04-05 13:32)
+    ✔ Copie para o arquivo pizza.ejs o conteúdo do link abaixo @done(22-04-05 13:32)
     https://github.com/sergiomoura/pizzaria-fantastica-tema/blob/master/pizza.html
-    ☐ Adeque o arquivo de pizza.ejs para exibir as informações dinâmicas:
+    ✔ Adeque o arquivo de pizza.ejs para exibir as informações dinâmicas: @done(22-04-05 13:42)
         Exemplo:
             Onde se vê:
             <h1>Quatro Queijos</h1>
@@ -178,17 +178,17 @@ Fase 9 - Criando uma página para mostrar detalhes de uma pizza:
             O que se deve ver são as informações da pizza Fracatu, ainda sem estilização.
 
 Fase 10 - Acrescentando estilo à página de pizza:
-    ☐ Na pasta public/css crie um arquivo pizza.css
-    ☐ Copie para o arquivo pizza.css o conteúdo do link abaixo:
+    ✔ Na pasta public/css crie um arquivo pizza.css @done(22-04-05 13:45)
+    ✔ Copie para o arquivo pizza.css o conteúdo do link abaixo: @done(22-04-05 13:45)
     https://github.com/sergiomoura/pizzaria-fantastica-tema/blob/master/assets/css/pizza.css
-    ☐ Adeque o os links de estilos para que eles carreguem o estilo da pasta public
+    ✔ Adeque o os links de estilos para que eles carreguem o estilo da pasta public @done(22-04-05 13:52)
     
     Verificações:
         Com o servidor rodando, visite o endereço http://localhost:3000/pizzas/3
         O que se deve ver é uma página com as informações de uma pizza, agora, estilizada.
 
 Fase 11 - Criando link da página inicial para página de detalhes de uma pizza:
-    ☐ Na view da página inicial, ou seja, no arquivo pizzas.ejs altere o link:
+    ✔ Na view da página inicial, ou seja, no arquivo pizzas.ejs altere o link: @done(22-04-05 14:48)
     Onde se vê:
         <a href="pizza.html">Ver Mais</a>
     Deve se ver:
@@ -200,20 +200,20 @@ Fase 11 - Criando link da página inicial para página de detalhes de uma pizza:
         Você deve ser direcionado para a página que exibe as informações
         da pizza que você clicou.
 Fase 12 - Exibindo pizzas buscadas:
-    ☐ Adequando o form da view para busca
+    ✔ Adequando o form da view para busca @done(22-04-05 14:49)
         No arquivo pizzas.ejs altere o form para que ele tenha método get e
         action apontando para a rota /pizzas/busca
-    ☐ No PizzasRouter.js, crie uma rota get para /pizzas/busca.
+    ✔ No PizzasRouter.js, crie uma rota get para /pizzas/busca. @done(22-04-05 14:49)
         Essa rota deve direcionar a requisição para PizzasController.buscar
         Ela deve ser definida ANDTES da rota '/pizzas/:id'. Por que?
-    ☐ No objeto do PizzasController.js crie uma função buscar.
+    ✔ No objeto do PizzasController.js crie uma função buscar. @done(22-04-05 15:13)
         Essa função deve:
-            ☐ Capturar o que o usuário digitou no campo de busca e guardar na variável trechoBuscado
+            ✔ Capturar o que o usuário digitou no campo de busca e guardar na variável trechoBuscado @done(22-04-05 14:50)
                Dica: Dê um console.log(req.query) e veja o conteúdo desse objeto.
-            ☐ Se o trechoBuscado for vazio, redirecione o usuário para a rota '/'
+            ✔ Se o trechoBuscado for vazio, redirecione o usuário para a rota '/' @done(22-04-05 14:51)
                 Dica: res.redirect(___)
-            ☐ Se trechoBuscado não for vazio:
-                - Filtre do array de pizzas todas as pizzas que tem no nome o trechoBuscado
+            ✔ Se trechoBuscado não for vazio: @done(22-04-05 15:13)
+                ✔ Filtre do array de pizzas todas as pizzas que tem no nome o trechoBuscado @done(22-04-05 14:57)
                     Atenção: A busca não deve ser sensível ao caso, ou seja, 
                     buscando por 'm' deve encontrar 'Marguerita', mesmo tendo-se
                     buscado pela letra minúscula
