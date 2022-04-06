@@ -2,7 +2,7 @@ const pizzas = require('../database/Pizzas.json');
 
 const PizzasController = {
     listar: (req, res) => {
-        res.render('pizzas', { pizzas });
+        res.render('pizzas', { pizzas, busca: '' });
     },
 
     mostrar: (req,res)=>{
@@ -15,7 +15,7 @@ const PizzasController = {
         const trechoBuscado = req.query.q;
         console.log(trechoBuscado);
 
-        if(trechoBuscado == ""){
+        if(trechoBuscado == ''){
             res.redirect('/');
         }else{
             let resultado = pizzas.filter( p=> p.nome.toLocaleUpperCase().includes(trechoBuscado.toUpperCase()));

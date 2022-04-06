@@ -7,13 +7,15 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="/css/styles.css">
 </head>
+
 <body>
 	<link rel="stylesheet" href="/css/index.css">
 	<form action="/pizzas/busca" method="get">
-		<input type="text" name="q" placeholder="Qual pizza você procura?" autocomplete="off" value="">
+		<input type="text" name="q" placeholder="Qual pizza você procura?" autocomplete="off" value="<%= busca ? busca : '' %>">
 		<button type="submit">Buscar</button>
 	</form>
 
+	<% if(pizzas.length > 0){ %>
 	<main>
         <% for(p of pizzas){ %>
             <article>
@@ -25,7 +27,9 @@
             </article>
         <% } %>
 	</main>
-
+	<% }else { %>
+		<div class="pizza-nao-encontrada">Nenhuma pizza encontrada. Tente ser menos específico na sua busca.</div>
+	<% } %>
 	<!--
 	<div class="pizza-nao-encontrada">Nenhuma pizza encontrada. Tente ser menos específico na sua busca.</div>
 	-->

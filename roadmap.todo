@@ -227,7 +227,7 @@ Fase 12 - Exibindo pizzas buscadas:
         Devem aparecer somente as pizzas Baiana e Meat & Bacon
 
 Fase 13 - Exibindo mensagem de específica quando nenhuma pizza for encontrada:
-    ☐ No pizzas.ejs:
+    ✔ No pizzas.ejs: @done(22-04-05 22:02)
         Crie um elemento por cento e nele um if que testa se
         o tamanho do array de pizzas é zero. Caso seja, mostrar mensagem...
         <div class="pizza-nao-encontrada">Nenhuma pizza encontrada. Tente ser menos específico na sua busca.</div>
@@ -238,8 +238,8 @@ Fase 13 - Exibindo mensagem de específica quando nenhuma pizza for encontrada:
         específico na sua busca."
 
 Fase 14 - Fazendo com que o que o usuário digitou na busca não seja perdido:
-    ☐ Na view  pizzas.ejs altere o elemento input type="text" para que o atributo value mostre busca, caso busca não seja vazio.
-    ☐ No controller listar do PizzasController, além do array de pizzas, passe um campo "busca" com o valor '' (string vazia).
+    ✔ Na view  pizzas.ejs altere o elemento input type="text" para que o atributo value mostre busca, caso busca não seja vazio. @done(22-04-05 22:27)
+    ✔ No controller listar do PizzasController, além do array de pizzas, passe um campo "busca" com o valor '' (string vazia). @done(22-04-05 22:27)
 
 Fase 15 - Passando de uma pizza para outra:
     Nessa fase, faremos com que na página que exibe os detalhes de
