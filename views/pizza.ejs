@@ -9,15 +9,20 @@
 </head>
 <body>
 	<link rel="stylesheet" href="/css/pizza.css">
+	<div class="home">
+		<a href="/">
+			<button>Home</button>
+		</a>
+	</div>
 	<main>
 		<h1><%= pizza.nome %>></h1>
-		<h2><%= pizza.preco %></pizza.preco>></h2>
+		<h2><%= pizza.preco %>></h2>
 		<img src="<%= pizza.img %>" alt="<%= pizza.nome %>>">
 		<div>Ingredientes: <%= pizza.ingredientes.join(', ') %></div>
         
 		<button>+ Add</button>
-		<a href="pizza.html" class="prev">&lt;</a>
-		<a href="pizza.html" class="next">&gt;</a>
+		<a href="/pizzas/<%= idAnterior %>" class="prev">&lt;</a>
+		<a href="/pizzas/<%= idProxima %>" class="next">&gt;</a>
 	</main>
 </body>
 </html>
